@@ -5,8 +5,9 @@
     </div>
     <div style="height: 100%;
     width: 2rem; border-radius: 1rem;box-shadow: 1rem 0 0 10px var(--background-color); margin-right: 0"></div>
-    <div style="height: 100%;width: 5rem; background-color: var(--background-color); border-bottom-right-radius: 1rem;
+    <div style="height: 100%;width: 2rem; background-color: var(--background-color); border-bottom-right-radius: 1rem;
     border-top-right-radius: 1rem"></div>
+    <chat></chat>
     <div class="userinformation">
       <div class="settings"><cog-icon style="color: white; height: 80%"></cog-icon></div>
       <div class="profile"><user-icon style="color: white; height: 80%"></user-icon></div>
@@ -15,12 +16,12 @@
 </template>
 
 <script setup lang="ts">
-import {CogIcon, UserIcon, SearchIcon} from "@heroicons/vue/outline";
-import {SunIcon} from "@heroicons/vue/outline";
+  import {CogIcon, UserIcon, SearchIcon} from "@heroicons/vue/outline";
+  import {SunIcon} from "@heroicons/vue/outline";
+  import Chat from "./Chat.vue"
 </script>
 
 <style scoped>
-
   .outer_div{
     height: 4rem;
     width: 98vw;
@@ -57,32 +58,46 @@ import {SunIcon} from "@heroicons/vue/outline";
     height: 3rem;
     width: 8rem;
     background-color: var(--highlight-color3);
-    margin-left: auto;
-    margin-right: 0.3rem;
+    margin-left: 1rem;
     border-radius: 2rem;
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
     align-items: center;
     justify-content: flex-start;
+    min-width: 8rem;
+    max-width: 8rem;
   }
   .settings{
     height: 100%;
-    width: 2.25rem;
-    border-radius: 50%;
+    width: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-left: auto;
     cursor: pointer;
+    /*background-color: red;*/
   }
-  .userinformation:hover{
+  .settings:after{
+    content: "";
+    width: 1rem;
+    height: 50px;
+    /*background-color: blue;*/
+    margin-left: 4rem;
+    position: absolute;
+  }
+  .settings:hover{
     background-color: var(--highlight-color4);
+  }
+  .settings:hover:after{
+    background-color: var(--highlight-color4);
+    height: 3rem;
   }
   .profile{
     height: 2.5rem;
     width: 2.5rem;
+    min-width: 2.5rem;
     padding: 0.25rem;
     /*border-left: 10px solid var(--highlight-color4);*/
     /*border-top: 10px solid var(--highlight-color4);*/
@@ -101,8 +116,5 @@ import {SunIcon} from "@heroicons/vue/outline";
   }
   .profile:hover{
     background-color: var(--highlight-color4);
-  }
-  .profile:hover .userinformation{
-    background-color: var(red);
   }
 </style>

@@ -1,11 +1,11 @@
 <template>
   <div :class="[isOpen ? 'outer_div': 'outer_div_closed']">
-    <button class="chat_button" @click="isOpen = !isOpen">
+    <div class="chat_button" @click="isOpen = !isOpen">
       <div class="chat_button_icon">
         <chat-icon class="chat-icon"/>
       </div>
 
-    </button>
+    </div>
     <div class="chat_stream">
 
     </div>
@@ -40,72 +40,32 @@ import {ChatIcon} from "@heroicons/vue/outline";
 
 <style scoped>
   .outer_div{
-    top: 1.5vh;
-    align-self: center;
-    width: 25vw;
-    height: 95vh;
-    position: fixed;
-    right: 60px;
-    max-width: 400px;
-    min-width: 250px;
-    background-color: #825acc;
-    opacity: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 5;
-    transition: all 200ms ease-in-out;
   }
   .outer_div_closed{
-    align-self: flex-start;
-    width: 0;
-    height: 0;
-    position: fixed;
-    right: 60px;
-    top: 1.5vh;
-    max-width: 400px;
-    background-color: #825acc;
-    /*opacity: 0;*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 5;
-    transition: all 200ms ease-in-out;
+    margin-left: auto;
   }
   .outer_div_closed .chat_input {
     min-height: 0;
     width: 0;
   }
   .chat_button{
-    position: absolute;
-    align-self: flex-end;
-    margin-top: 1%;
-    margin-right: 1%;
-    width: 60px;
-    height: 30px;
-    background-color: #d0d0d0;
-    /*overflow: hidden;*/
-    display: flex;
-    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--highlight-color2);
+    border-radius: 50%;
   }
   .chat_button_icon{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
   }
-  .chat_button_icon .chat-icon {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    filter: invert(1);
+  .chat-icon{
+    height: 80%;
   }
-
+  .chat_button:hover{
+    background-color: var(--highlight-color4);
+  }
   .chat_stream{
     width: 95%;
     height: 80%;

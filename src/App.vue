@@ -1,9 +1,8 @@
 <template>
   <div class="site">
 
-<!--    <playmap isOpen=""></playmap>-->
-    <chat></chat>
-    <user-info></user-info>
+    <playmap></playmap>
+<!--    <user-info></user-info>-->
     <bottom-navigation></bottom-navigation>
 
 
@@ -12,7 +11,6 @@
 
 <script setup lang="ts">
 import Playmap from "./components/Playmap.vue"
-import Chat from "./components/Chat.vue";
 import BottomNavigation from "./components/BottomNavigation.vue";
 import UserInfo from "./components/UserInfo.vue";
 import {SunIcon} from "@heroicons/vue/outline";
