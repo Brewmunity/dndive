@@ -1,25 +1,34 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
+  <div class="site">
+
+<!--    <playmap isOpen=""></playmap>-->
+    <chat></chat>
+    <user-info></user-info>
+    <bottom-navigation></bottom-navigation>
+
+
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script setup lang="ts">
+import Playmap from "./components/Playmap.vue"
+import Chat from "./components/Chat.vue";
+import BottomNavigation from "./components/BottomNavigation.vue";
+import UserInfo from "./components/UserInfo.vue";
+import {SunIcon} from "@heroicons/vue/outline";
+document.title = 'DnDHelper'
+
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+  .site {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    align-items: center;
+  }
 </style>
+
