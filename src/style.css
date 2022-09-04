@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Bahnschrift, Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -14,11 +14,19 @@
   -webkit-text-size-adjust: 100%;
 
   /*  Colors  */
-  --background-color: #141415;
-  --highlight-color1: #252626;
-  --highlight-color2: #323234;
-  --highlight-color3: #3c3c3f;
-  --highlight-color4: #4b4b50;
+  --background-color: #141515;
+  --highlight-color1: #1d1e1e;
+  --highlight-color2: #323434;
+  --highlight-color3: #3c3f3e;
+  --highlight-color4: #4b504f;
+  --highlight-color5: #5c6461;
+  --highlight-color6: #6b7570;
+  --highlight-color7: #78837f;
+  --highlight-color8: #848f8a;
+  --highlight-color9: #939f99;
+  --highlight-color10: #a3b0a9;
+
+  --accent-color: #22ad85;
 }
 
 body {
