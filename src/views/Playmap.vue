@@ -35,6 +35,8 @@ import {DotsHorizontalIcon, XIcon} from "@heroicons/vue/solid";
     height: 1.5rem;
     width: fit-content;
     min-width: 5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.8rem;
     background-color: var(--highlight-color2);
     border-bottom-right-radius: 1rem;
     align-self: flex-start;
