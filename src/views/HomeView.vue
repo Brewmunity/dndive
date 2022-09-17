@@ -53,7 +53,7 @@
             <p>Tools</p>
           </div>
           <div class="tools-overview-list">
-
+            <calendar-icon name="Calculator"></calendar-icon>
           </div>
         </div>
       </div>
@@ -64,6 +64,7 @@
 <script setup lang="ts">
 import CampaignIcon from "../components/Home/CampaignIcon.vue";
 import CharacterIcon from "../components/Home/CharacterIcon.vue";
+import CalendarIcon from "../components/Home/CalendarIcon.vue";
 </script>
 
 <style scoped>
