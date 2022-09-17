@@ -159,13 +159,13 @@ import {ChatIcon, XIcon, DotsVerticalIcon, DotsHorizontalIcon, UserIcon} from "@
     right: 0.5rem;
     border-radius: 0.5rem 0.5rem 2rem 2rem;
     transition: all 0.1s ease-in-out;
-    display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 15rem;
     min-height: 20rem;
     z-index: 5;
     opacity: 0;
+    display: none;
   }
   .chat_settings_control{
     height: 1.2rem;
@@ -332,7 +332,6 @@ import {ChatIcon, XIcon, DotsVerticalIcon, DotsHorizontalIcon, UserIcon} from "@
     margin: 0.5rem 0.2rem 0 0.3rem;
     text-align: left;
   }
-
   .chat_input_container{
     margin-top: 2%;
     width: 95%;
