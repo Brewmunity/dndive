@@ -1,6 +1,6 @@
 import {createWebHistory, createRouter} from "vue-router";
-import HomeView from "/src/components/HomeView.vue";
-import Playmap from "/src/components/Playmap.vue";
+import HomeView from "/src/views/HomeView.vue";
+import Playmap from "/src/views/Playmap.vue";
 
 
 const routes = [
