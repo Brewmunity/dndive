@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-  import Playmap from "./components/Playmap.vue"
+  import Playmap from "./views/Playmap.vue"
   import BottomNavigation from "./components/BottomNavigation.vue";
   import RouterViewCustom from "./components/RouterViewCustom.vue";
   import UserInfo from "./components/UserInfo.vue";
