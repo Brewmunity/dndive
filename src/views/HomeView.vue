@@ -1,7 +1,12 @@
 <template>
   <div class="homeview_outer">
     <div id="homeview_tab_bar_highlight_bar_top" class="homeview_tab_line"></div>
-    <div class="homeview_tab_name_container">HOME</div>
+    <div class="homeview-tab-bar-info">
+      <div class="homeview_tab_name_container">HOME</div>
+      <div title="Help" class="homeview-tab-help-container">
+        <question-mark-circle-icon class="help-icon"></question-mark-circle-icon>
+      </div>
+    </div>
     <div class="homeview_site_content">
       <div class="homeview_campaign_overview">
         <div class="homeview-tab-container-title">
