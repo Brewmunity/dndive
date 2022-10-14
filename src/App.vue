@@ -7,11 +7,14 @@
 
 <script setup lang="ts">
   import Playmap from "./views/Playmap.vue"
-  import BottomNavigation from "./components/BottomNavigation.vue";
+  import BottomNavigation from "./components/Taskbar/BottomNavigation.vue";
   import RouterViewCustom from "./components/RouterViewCustom.vue";
   import UserInfo from "./components/UserInfo.vue";
   import {SunIcon} from "@heroicons/vue/outline";
-  document.title = 'DnDHelper';
+  import {ref} from "vue";
+
+  document.title = 'DnDive';
+
 
 </script>
 

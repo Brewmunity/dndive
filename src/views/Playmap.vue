@@ -1,6 +1,8 @@
 <template>
   <div class="playmap_outer_div">
-    <div id="playmap_tab_bar_highlight_bar_top" style="height: 0.5rem; width: 100%; background-color: var(--highlight-color2); border-radius: 0.5rem 0.5rem 0 0"></div>
+    <div id="playmap_tab_bar_highlight_bar_top" style="height: 0.5rem; width: 100%; background-color: var(--highlight-color2); border-radius: 0.5rem 0.5rem 0 0">
+
+    </div>
     <div class="playmap_tab_name_container">
       MAP
     </div>
@@ -21,6 +23,7 @@ import {DotsHorizontalIcon, XIcon} from "@heroicons/vue/solid";
 </script>
 
 <style scoped>
+
   .playmap_outer_div{
     height: 100%;
     width: 100%;
