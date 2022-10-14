@@ -2,7 +2,7 @@
   <div class="outer_div">
     <router-link to="/" style="display: flex; flex-direction: row; align-content: center; height: 100%;">
       <div class="logo_container" title="DnD Helper">
-        <img style="height: 4rem;" src="src/assets/icons/general/DnDHelper_Logo.png">
+        <dn-dive-icon-l-q class="logo"></dn-dive-icon-l-q>
       </div>
     </router-link>
     <div class="break_left"></div>
@@ -10,7 +10,7 @@
     <div class="break_right"></div>
     <router-link to="/">
       <div class="homeview_button">
-        <home-icon style="height: 80%"></home-icon>
+        <home-icon style="height: 80%; color: var(--accent-color)"></home-icon>
       </div>
     </router-link>
     <router-link to="/playmap">
@@ -28,7 +28,29 @@
 
 <script setup lang="ts">
   import {CogIcon, UserIcon, MapIcon, HomeIcon, ScissorsIcon} from "@heroicons/vue/outline";
-  import Chat from "./Chat.vue"
+  import Chat from "../Chat.vue"
+  import DnDiveIconHQ from "../General/DnDiveIconHQ.vue";
+  import DnDiveIconLQ from "../General/DnDiveIconLQ.vue";
+  import {activeViewsStore} from "../../stores/activeViews";
+  import {storeToRefs} from "pinia";
+
+  const activeViews = activeViewsStore();
+  const {count, tabs, name} = storeToRefs(activeViews)
+
+  async function tost() {
+    console.log(name.value, count.value, tabs.value);
+    await activeViews.addTab({"Type": "Playmap"});
+    await console.log(name.value, count.value, tabs.value);
+    await activeViews.addTab({"test11": "yoooo"});
+    console.log(name.value, count.value, tabs.value);
+    await activeViews.addTab({"test22": "damn"});
+    console.log(name.value, count.value, tabs.value);
+
+    console.log(tabs.value[0]["test11"])
+  }
+
+  tost();
+
 </script>
 
 <style scoped>
@@ -48,6 +70,12 @@
     height: 100%;
     margin-left: 2rem;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo{
+    height: 3.5rem;
   }
   .break_left{
     height: 100%;
