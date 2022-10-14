@@ -3,7 +3,7 @@
     <div class="tool-calendar-image">
       <calendar-icon class="tool-icon-image-source"></calendar-icon>
     </div>
-    <div class="tool-calendar-title-area">
+    <div class="calendar-tool-title-area">
       <h3>Calendar</h3>
     </div>
   </div>
@@ -13,14 +13,6 @@
   import {ref} from "vue";
   import {CalendarIcon} from "@heroicons/vue/outline";
 
-  interface Props {
-    name: string
-    image?: string
-  }
-
-  const props = defineProps<Props>();
-
-  console.log(props.image);
 
 </script>
 
@@ -42,8 +34,8 @@
   .outer-calendar-icon:hover{
     transform: scale(110%);
   }
-  .outer-calendar-icon:hover .character-icon-title-area{
-    background-color: rgba(34, 141, 173, 0.9);
+  .outer-calendar-icon:hover .calendar-tool-title-area{
+    background-color: rgba(53, 34, 173, 0.9);
   }
   .tool-calendar-image{
     height: 100%;
@@ -57,16 +49,17 @@
     margin-top: auto;
     z-index: 2;
     transform: scale(1);
+    color: red;
   }
-  .tool-calendar-title-area{
-    background-color: rgba(34, 141, 173, 0.5);
+  .calendar-tool-title-area{
+    background-color: rgba(53, 34, 173, 0.5);
     height: fit-content;
     width: 100%;
     font-size: 0.8em;
     z-index: 3;
     transition: all 0.1s ease-in-out;
   }
-  .tool-calendar-title-area h3 {
+  .calendar-tool-title-area h3 {
     margin: 0 0.2rem;
     color: white;
   }
