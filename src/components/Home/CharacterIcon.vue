@@ -22,10 +22,10 @@
   const characterImage = ref(props.image);
 
   if(characterImage.value == null){
-    characterImage.value = "src/assets/images/campaigns/default.jpg";
+    characterImage.value = "src/assets/images/characters/default.jpg";
   }
 
-  console.log(props.image);
+  // console.log(props.image);
 
 </script>
 
@@ -54,7 +54,6 @@
   .character-icon-image{
     height: 100%;
     width: 100%;
-    /*background-color: red;*/
     position: absolute;
   }
   .character-icon-image-source{

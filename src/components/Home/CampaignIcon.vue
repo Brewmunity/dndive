@@ -25,7 +25,7 @@
     campaignImage.value = "src/assets/images/campaigns/default.jpg";
   }
 
-  console.log(props.image);
+  // console.log(props.image);
 
 </script>
 
@@ -55,7 +55,6 @@
   .campaign-icon-background-image{
     height: 100%;
     width: 100%;
-    /*background-color: red;*/
     position: absolute;
   }
   .campaign-icon-background-image-source{
