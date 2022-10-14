@@ -75,7 +75,9 @@
             <p>Tools</p>
           </div>
           <div class="tools-overview-list">
-            <calendar-icon name="Calculator"></calendar-icon>
+            <calendar-icon></calendar-icon>
+            <calculator-icon></calculator-icon>
+            <encyclopedia-icon></encyclopedia-icon>
           </div>
         </div>
       </div>
@@ -86,7 +88,28 @@
 <script setup lang="ts">
 import CampaignIcon from "../components/Home/CampaignIcon.vue";
 import CharacterIcon from "../components/Home/CharacterIcon.vue";
-import CalendarIcon from "../components/Home/CalendarIcon.vue";
+import CalendarIcon from "../components/Tools/CalendarIcon.vue";
+import CalculatorIcon from "../components/Tools/CalculatorIcon.vue";
+import EncyclopediaIcon from "../components/Tools/EncyclopediaIcon.vue";
+
+import {PlusIcon, QuestionMarkCircleIcon} from "@heroicons/vue/outline";
+import {ref} from "vue";
+
+const campaignList = ref([]);
+  const characterList = ref([]);
+
+  async function fetchCampaigns() {
+    const response = await fetch('http://127.0.0.1:8000/getCampaigns');
+    campaignList.value = await response.json();
+  }
+  fetchCampaigns();
+
+  async function fetchCharacters() {
+    const response = await fetch('http://127.0.0.1:8000/getCharacters');
+    characterList.value = await response.json();
+  }
+  fetchCharacters();
+
 </script>
 
 <style scoped>
@@ -107,8 +130,14 @@ import CalendarIcon from "../components/Home/CalendarIcon.vue";
     background-color: var(--highlight-color2);
     border-radius: 0.5rem 0.5rem 0 0;
   }
-  .homeview_tab_name_container{
+  .homeview-tab-bar-info{
+    display: flex;
+    flex-direction: row;
     height: 1.5rem;
+    width: 100%;
+  }
+  .homeview_tab_name_container{
+    height: 100%;
     width: fit-content;
     min-width: 5rem;
     padding-left: 0.5rem;
@@ -119,6 +148,28 @@ import CalendarIcon from "../components/Home/CalendarIcon.vue";
     display: flex;
     flex-direction: column;
     font-size: 1.3em;
+    cursor: default;
+  }
+  .homeview-tab-help-container{
+    height: 100%;
+    width: fit-content;
+    min-width: 1.4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: var(--highlight-color2);
+    border-bottom-left-radius: 1rem;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    margin-left: auto;
+  }
+  .help-icon{
+    position: absolute;
+    align-self: center;
+    height: 1.8rem;
+    transform: translateY(-0.4rem);
+    cursor: pointer;
   }
   .homeview_site_content{
     height: calc(100% - 3rem);
@@ -169,6 +220,36 @@ import CalendarIcon from "../components/Home/CalendarIcon.vue";
   .campaign_overview_list::-webkit-scrollbar-thumb:hover{
     padding-left: 12px;
   }
+  .add-campaign-icon{
+    height: 9rem;
+    width: 9rem;
+    background-color: var(--highlight-color2);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .add-campaign-icon:hover{
+    transform: scale(110%);
+  }
+  .add-campaign-icon p{
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+    font-size: 1.1em;
+  }
+  .add-campaign-plus-icon{
+    margin-bottom: auto;
+  }
+  .add-campaign-icon:hover .add-campaign-plus-icon{
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s ease-in-out infinite;
+  }
   .homeview_right_container{
     height: 100%;
     width: 75%;
@@ -211,11 +292,41 @@ import CalendarIcon from "../components/Home/CalendarIcon.vue";
   .characters-overview-list::-webkit-scrollbar-thumb:hover{
     padding-left: 12px;
   }
+  .add-character-icon{
+    height: 7rem;
+    width: 7rem;
+    background-color: var(--highlight-color2);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .add-character-icon:hover{
+    transform: scale(110%);
+  }
+  .add-character-icon p{
+    font-size: 0.9em;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  .add-character-plus-icon{
+    margin-bottom: auto;
+  }
+  .add-character-icon:hover .add-character-plus-icon{
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s ease-in-out infinite;
+  }
   .homeview_right_tools_container{
     width: 100%;
     height: 50%;
     border: 4px solid var(--highlight-color2);
-    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.5rem 0.5rem 1.5rem 0.5rem;
     display: flex;
     flex-direction: column;
 
@@ -234,7 +345,6 @@ import CalendarIcon from "../components/Home/CalendarIcon.vue";
   .tools-overview-list{
     height: 100%;
     width: calc(100% - 1rem);
-    background-color: rgba(255, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     padding: 0.5rem;
@@ -253,4 +363,8 @@ import CalendarIcon from "../components/Home/CalendarIcon.vue";
   .tools-overview-list::-webkit-scrollbar-thumb:hover{
     padding-left: 12px;
   }
+
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 </style>
