@@ -13,6 +13,10 @@
           <p>Campaigns</p>
         </div>
         <div class="campaign_overview_list">
+          <campaign-icon
+              v-for="campaign in campaignList"
+              :title="campaign.campaignName" :image="campaign.campaignImage">
+          </campaign-icon>
           <campaign-icon title="The Sunless Citadel"
                          image="src/assets/images/campaigns/sunlesscitadel.jpg"></campaign-icon>
           <campaign-icon title="Der Revetanische Seelenhändler"
@@ -25,6 +29,11 @@
           <campaign-icon title="Eldoks Erbe"
                          image="src/assets/images/campaigns/turtle.jpg"></campaign-icon>
           <campaign-icon title="Einsames Rudel"></campaign-icon>
+
+          <div class="add-campaign-icon">
+            <p>Add Campaign</p>
+            <plus-icon class="add-campaign-plus-icon"></plus-icon>
+          </div>
         </div>
       </div>
       <div class="homeview_right_container">
