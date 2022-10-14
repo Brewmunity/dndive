@@ -136,7 +136,7 @@ import {ChatIcon, XIcon, DotsVerticalIcon, DotsHorizontalIcon, UserIcon} from "@
   }
   .chat_box_open{
     height: 82vh;
-    width: 18vw;
+    width: 25vw;
     background-color: var(--highlight-color3);
     position: absolute;
     bottom: 5rem;
@@ -146,7 +146,7 @@ import {ChatIcon, XIcon, DotsVerticalIcon, DotsHorizontalIcon, UserIcon} from "@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 15rem;
+    min-width: 25rem;
     min-height: 20rem;
     z-index: 5;
   }
@@ -348,8 +348,8 @@ import {ChatIcon, XIcon, DotsVerticalIcon, DotsHorizontalIcon, UserIcon} from "@
     padding: 0.5rem;
     box-sizing: border-box;
     border: none;
-    height: 99%;
-    width: 99%;
+    height: 100%;
+    width: 100%;
     background-color: transparent;
     border-radius: 0.5rem 0.5rem 1.5rem 1.5rem;
     font-size: 15px;
@@ -360,16 +360,16 @@ import {ChatIcon, XIcon, DotsVerticalIcon, DotsHorizontalIcon, UserIcon} from "@
     white-space: pre-wrap;
     resize: none;
   }
-
   .chat_input_textbox::-webkit-scrollbar {
     width: 10px;
   }
   .chat_input_textbox::-webkit-scrollbar-track {
     background: var(--highlight-color3);
+    margin-bottom: 0.5rem;
   }
   .chat_input_textbox::-webkit-scrollbar-thumb {
-    background-color: var(--highlight-color1);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
+    background-color: var(--highlight-color1);
+    border-radius: 20px;
   }
 
 </style>
