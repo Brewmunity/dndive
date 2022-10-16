@@ -1,20 +1,20 @@
 <template>
-  <div class="site">
+  <div v-if="loginStore.userLoggedIn" class="site">
     <router-view-custom class="application"></router-view-custom>
     <bottom-navigation></bottom-navigation>
   </div>
+  <login-site v-if="!loginStore.userLoggedIn"></login-site>
 </template>
 
 <script setup lang="ts">
-  import Playmap from "./views/Playmap.vue"
   import BottomNavigation from "./components/Taskbar/BottomNavigation.vue";
   import RouterViewCustom from "./components/RouterViewCustom.vue";
-  import UserInfo from "./components/UserInfo.vue";
-  import {SunIcon} from "@heroicons/vue/outline";
-  import {ref} from "vue";
+  import LoginSite from "./views/LoginSite.vue";
+  import {userLoggedInStore} from "./stores/userLoggedIn";
 
   document.title = 'DnDive';
 
+  const loginStore = userLoggedInStore();
 
 </script>
 

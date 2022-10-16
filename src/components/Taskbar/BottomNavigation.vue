@@ -37,19 +37,19 @@
   const activeViews = activeViewsStore();
   const {count, tabs, name} = storeToRefs(activeViews)
 
-  async function tost() {
-    console.log(name.value, count.value, tabs.value);
-    await activeViews.addTab({"Type": "Playmap"});
-    await console.log(name.value, count.value, tabs.value);
-    await activeViews.addTab({"test11": "yoooo"});
-    console.log(name.value, count.value, tabs.value);
-    await activeViews.addTab({"test22": "damn"});
-    console.log(name.value, count.value, tabs.value);
+  // async function tost() {
+  //   console.log(name.value, count.value, tabs.value);
+  //   await activeViews.addTab({"Type": "Playmap"});
+  //   await console.log(name.value, count.value, tabs.value);
+  //   await activeViews.addTab({"test11": "yoooo"});
+  //   console.log(name.value, count.value, tabs.value);
+  //   await activeViews.addTab({"test22": "damn"});
+  //   console.log(name.value, count.value, tabs.value);
+  //
+  //   console.log(tabs.value[0]["test11"])
+  // }
 
-    console.log(tabs.value[0]["test11"])
-  }
-
-  tost();
+  // tost();
 
 </script>
 
@@ -183,14 +183,14 @@
   }
 
   @media (max-width: 650px) {
-  .logo_container{
-    display: none;
+    .logo_container{
+      display: none;
+    }
+    .break_left{
+      display: none;
+    }
+    .break_middle{
+      display: none;
+    }
   }
-  .break_left{
-    display: none;
-  }
-  .break_middle{
-    display: none;
-  }
-}
 </style>
