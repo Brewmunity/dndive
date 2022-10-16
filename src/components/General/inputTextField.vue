@@ -84,13 +84,6 @@ import {onMounted, ref} from "vue";
     background-color: var(--highlight-color1);
     padding: 0.2rem 0.5rem 0.2rem 0.5rem;
     border-radius: 0.5rem 0.5rem 0 0;
-
+    border: 3px solid transparent;
   }
-  /*.text-input:focus ~ .input-name{*/
-  /*  transform: translateY(-2.2rem);*/
-  /*  font-size: 1rem;*/
-  /*  border-left: 3px solid white;*/
-  /*  border-top: 3px solid white;*/
-  /*  border-right: 3px solid white;*/
-  /*}*/
 </style>

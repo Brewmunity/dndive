@@ -13,8 +13,6 @@
         </div>
         <input-text-field text="Username"></input-text-field>
         <input-password-field text="Password"></input-password-field>
-<!--        <input type="text" value="">-->
-<!--        <input type="text" value="">-->
       </div>
       <div class="forgot-password-div">
         <a href="#">Forgot your password? Reset here</a>
