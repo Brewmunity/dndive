@@ -1,6 +1,10 @@
 <template>
   <div class="login-site">
     <div class="dndive-icon">
+      <div class="work-in-progress">
+        <exclamation-circle-icon style="height: 5rem; color: darkred"></exclamation-circle-icon>
+        <p>This Application is a work in progress</p>
+      </div>
       <dn-dive-icon-h-q style="height: 100%"></dn-dive-icon-h-q>
     </div>
     <div class="outer-login-window">
@@ -8,9 +12,6 @@
         <p>Welcome to DnDive</p>
       </div>
       <div class="outer-forms-window">
-        <div class="">
-
-        </div>
         <input-text-field text="Username"></input-text-field>
         <input-password-field text="Password"></input-password-field>
       </div>
@@ -30,6 +31,7 @@
   import {userLoggedInStore} from "../stores/userLoggedIn";
   import InputTextField from "../components/General/inputTextField.vue";
   import InputPasswordField from "../components/General/inputPasswordField.vue";
+  import {ExclamationCircleIcon} from "@heroicons/vue/outline";
 
   const loginStore = userLoggedInStore();
 
@@ -133,6 +135,18 @@
   .logregbutton:hover{
     cursor: pointer;
     filter: brightness(1.3);
+  }
+  .work-in-progress{
+    margin-bottom: 2rem;
+    height: 5rem;
+    width: fit-content;
+    padding-right: 1rem;
+    background-color: var(--highlight-color4);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: center;
   }
 
   @media (max-width: 1024px) {
