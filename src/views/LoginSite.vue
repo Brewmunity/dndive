@@ -3,7 +3,7 @@
     <div class="dndive-icon">
       <div class="work-in-progress">
         <exclamation-circle-icon style="height: 5rem; color: darkred"></exclamation-circle-icon>
-        <p>This Application is a work in progress</p>
+        <p>This application is a work in progress</p>
       </div>
       <dn-dive-icon-h-q style="height: 100%"></dn-dive-icon-h-q>
     </div>
