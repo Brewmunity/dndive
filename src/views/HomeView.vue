@@ -46,23 +46,23 @@
                 v-for="character in characterList"
                 :name="character.characterName" :image="character.characterImage">
             </character-icon>
-           <character-icon name="Er'hat Krea" ></character-icon>
-            <character-icon name="Ruby" ></character-icon>
-            <character-icon name="Samson" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
-            <character-icon name="Trunk" ></character-icon>
+            <character-icon name="Er'hat Krea"></character-icon>
+            <character-icon name="Ruby"></character-icon>
+            <character-icon name="Samson"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
+            <character-icon name="Trunk"></character-icon>
 
             <div class="add-character-icon">
               <p>Add Character</p>
@@ -78,6 +78,7 @@
             <calendar-icon></calendar-icon>
             <calculator-icon></calculator-icon>
             <encyclopedia-icon></encyclopedia-icon>
+            <music-icon></music-icon>
           </div>
         </div>
       </div>
@@ -94,6 +95,7 @@ import EncyclopediaIcon from "../components/Tools/EncyclopediaIcon.vue";
 
 import {PlusIcon, QuestionMarkCircleIcon} from "@heroicons/vue/outline";
 import {ref} from "vue";
+import MusicIcon from "../components/Tools/MusicIcon.vue";
 
 const campaignList = ref([]);
   const characterList = ref([]);
