@@ -47,7 +47,7 @@
     margin-top: auto;
     z-index: 2;
     transform: scale(1);
-    color: red;
+    color: white;
   }
   .music-icon-title-area{
     background-color: rgba(53, 34, 173, 0.5);
