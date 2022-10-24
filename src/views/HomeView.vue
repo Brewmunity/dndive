@@ -78,7 +78,9 @@
             <calendar-icon></calendar-icon>
             <calculator-icon></calculator-icon>
             <encyclopedia-icon></encyclopedia-icon>
-            <music-icon></music-icon>
+            <router-link to="/music">
+              <music-icon></music-icon>
+            </router-link>
           </div>
         </div>
       </div>
